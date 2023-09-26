@@ -2,26 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+ 
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+   
+  background:#EEE;
 }
+/* Define custom scrollbar properties */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust the width to make it thinner */
+  border-radius: 10px; /* Add rounded corners */
+}
+
+/* Define scrollbar track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the track */
+}
+
+/* Define scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #45C5C1; /* Color of the thumb */
+  border-radius: 10px; /* Add rounded corners to the thumb */
+}
+
+/* Define scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #349a96; /* Color of the thumb on hover */
+}
+

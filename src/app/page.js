@@ -1,113 +1,169 @@
-import Image from 'next/image'
+import car from "/public/car.jpeg";
+import prize from "/public/prize.svg";
+import team from "/public/team.jpeg";
+import fix from "/public/fix.jpeg";
+
+import team2 from "/public/team2.jpeg";
+import DesignServicesIcon from "@mui/icons-material/DesignServices";
+import TabIcon from "@mui/icons-material/Tab";
+
+import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturing";
+
+import Image from "next/image";
+import { Lato } from "next/font/google";
+const lato = Lato({
+  subsets: ["latin"],
+  display: "swap",
+
+  weight: ["400"],
+});
 
 export default function Home() {
+  const prizes = [
+    { name: "FSIT: 2nd 2023", img: prize },
+    { name: "FSUK: 6th 2023", img: prize },
+    { name: "FSIT: 3rd 2022", img: prize },
+    { name: "FSIT: 2nd 2021", img: prize },
+    { name: "FSIT: 2nd 2020", img: prize },
+    { name: "FS Business event: 6th 2019", img: prize },
+  ];
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="mt-5">
+      <section className="bg-[#2E2E2E] w-full  ">
+        <div className=" h-[504px]     relative">
+          <Image
+            className="brightness-50 object-cover"
+            src={car}
+            fill
+            alt="car"
+          ></Image>
+          <span
+            className={`${lato.className} absolute z-50 text-[#fff] text-[36px] tracking-[5.22px] w-[621px] block p-[1rem] top-[6rem] left-[4%] border-l-[#45C5C1] border-l-solid border-l-4`}
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            AAM FORMULA STUDENT TEAM IS EGYPT'S UNRIVALED FORMULA STUDENT
+            SUCCESS STORY
+          </span>
         </div>
-      </div>
+        <div className="flex justify-between text-[#fff] items-center mt-[10px] ">
+          <div className="left border-l-[#45C5C1] border-l-solid border-l-4 text-[36px] w-[154px] relative left-[4%] p-[1rem]">
+            Our History
+          </div>
+          <div className="right flex gap-[63px]">
+            {prizes.map((prize) => {
+              return (
+                <div key="2" className="flex flex-col items-center">
+                  <div className="relative w-[87px] h-[94px]">
+                    <Image src={prize.img} alt="prize" fill></Image>
+                  </div>
+                  <div className="text-[12px] w-[122px] text-center mt-2">
+                    {prize.name}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      <section className="flex justify-center mt-5 gap-[5rem] border-b-[#D9D9D9] border-b-solid border-b-4">
+        <div className="flex flex-col text-center">
+          <span className="text-[64px]">12</span>{" "}
+          <span className="text-[36px]">PROJECTS</span>
+        </div>
+        <div className="flex flex-col text-center">
+          <span className="text-[64px]">13</span>{" "}
+          <span className="text-[36px]">COMPETITIONS</span>
+        </div>
+        <div className="flex flex-col text-center">
+          <span className="text-[64px]">50+</span>{" "}
+          <span className="text-[36px]">MEMBERS</span>
+        </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section className="mt-5 flex justify-evenly  mx-5 items-center mb-3">
+        <div className="w-[777px] h-[405px] relative">
+          <Image
+            className="rounded-3xl shadow-xl shadow-[rgba(0, 0, 0, 0.25)] object-cover"
+            src={team}
+            alt="team"
+            fill
+          ></Image>
+        </div>
+        <div className="w-[382px] flex flex-col">
+          <span className="text-[36px] text-[#282828] font-bold">About Us</span>
+          <span className="text-[20px] text-[#282828] font-light">
+            Our mission is to design, manufacture, test, and race a competitive
+            single-seat race car. Through this challenging journey, we aim to
+            develop our skills in budgeting, teamwork, and gain hands-on
+            experience in design and manufacturing that will shape our future
+            careers.
+          </span>
+        </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
+      <section className="mt-5">
+        <div className="relative h-[303px]">
+          <Image
+            className="brightness-50 object-cover"
+            src={fix}
+            alt="fix"
+            fill
+          ></Image>
+          <div className="text-white absolute w-[100%] text-center top-[36%] text-[64px] font-light">
+            WHAT WE DO
+          </div>
+        </div>
+        <div className="flex items-center justify-evenly mt-5">
+          <div className="flex flex-col  justify-start gap-5 p-3   max-w-[389px] items-center min-h-[266px] rounded-2xl shadow-lg shadow-[rgba(0, 0, 0, 0.25)]   bg-[#EEEEEE]">
+            <div>
+              <DesignServicesIcon className="text-[50px]"></DesignServicesIcon>
+            </div>
+            <div className="text-[15px] font-[600]">Design</div>
+            <div className="text-center text-[15px] font-[500] text-[#000]">
+              We design our suspension,wheel package,chassis,powertran ,aero
+              package and electronics that meets our performance goals for the
+              season on CAD software We also develop,debug verify and validate
+              our Autonomous racing software.
+            </div>
+          </div>
+          <div className="flex flex-col  justify-start gap-5 p-3  max-w-[389px] items-center min-h-[266px] rounded-2xl shadow-lg shadow-[rgba(0, 0, 0, 0.25)]   bg-[#EEEEEE] ">
+            <div>
+              <PrecisionManufacturingIcon className="text-[50px]"></PrecisionManufacturingIcon>
+            </div>
+            <div className="text-[15px] font-[600]">Manufacturing</div>
+            <div className="text-center text-[15px] font-[500] text-[#000]">
+              We CNC our wheel package,weld our chassis, mold our aero
+              package,mount our sensors,assemble our circuits and test our
+              powertrain systems
+            </div>
+          </div>
+          <div className="flex flex-col  justify-start gap-5 p-3   max-w-[389px] items-center min-h-[266px] rounded-2xl shadow-lg  shadow-[rgba(0, 0, 0, 0.25)]   bg-[#EEEEEE]">
+            <div>
+              <TabIcon className="text-[50px]"></TabIcon>
+            </div>
+            <div className="text-[15px] font-[600]">Business</div>
+            <div className="text-center text-[15px] font-[500] text-[#000]">
+              We manage the social media accounts market ,fund raise and arrange
+              events
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="mt-5 mb-5">
+        <div className="h-[302px] relative">
+          <Image
+            className="brightness-50 object-cover"
+            src={team2}
+            fill
+            alt="team2"
+          ></Image>
+          <div className="absolute w-full text-center flex flex-col top-[30%]">
+            <span className="text-white text-[64px] font-light">FIND US </span>
+            <span className="text-white text-[32px] font-light">
+              AT LAB G 003
             </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+          </div>
+        </div>
+      </section>
     </main>
-  )
+  );
 }
