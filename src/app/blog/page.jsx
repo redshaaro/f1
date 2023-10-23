@@ -3,51 +3,72 @@ import React from 'react'
 const page = () => {
   return (
     <section>
-        <h1 className='text-center mt-10 text-4xl font-bold'>2023 LAUNCH</h1>
-        <div className='m-7 bg-white p-6 w-[350px] md:w-[600px] lg:w-[700px] xl:w-[900px] mx-auto'>
-        <ul className='flex justify-between mb-2'>
-          <li className='w-[5%]'>
-            <img  src="./close.svg" alt="" />
-          </li>
-          <li className='w-[30%]'>
-            <img  src="./logo.png" alt="" />
-          </li>
-          <li className='w-[5%]'>
-            <img  src="./close.svg" alt="" />
-          </li>
-        </ul>
-        <ul className='flex gap-3 text-xs md:text-sm justify-center mb-4 font-semibold'>
-          <li>
-            <h1>Arab Academy Motors</h1>
-          </li>
-          <li>
-            <h1>16 Oct. 2023</h1>
-          </li>
-        </ul>
-        <img className='mx-auto md:w-[80%]' src="./blog-hero.png" alt="" />
-        <blockquote className='mt-5 leading-6 text-left font-semibold'>
-        <p className='mb-6'>
-        Following the triumph of M021, the AAM19 2019 model stands as the culmination of years of relentless research and development by our dedicated team.
-        </p>
-        <p className='mb-6'>
-         Embracing the M021 platform, it proudly showcased the iconic McLaren Papaya livery, paying tribute to Bruce McLaren's 50th anniversary in 2020.
-         </p>
-         <p className='mb-6'>
-          With the aim of making a resounding comeback and securing victory in our debut year, the AAM19 boasted an upgraded cooling and aerodynamics system, allowing it to unleash its full potential in Australia. This remarkable achievement marked our team's historic win in its category and a triumphant victory in our very first dynamic event.
-        </p>
-        </blockquote>
-        <ul className='flex gap-10 border-black border-t-2 align-middle content-center'>
-            <li className='mt-2 ml-2'>
-                <img src="./ico-3.png" alt="" />
-            </li>
-            <li className='mt-2'>
-                <img src="./ico-2.png" alt="" />
-            </li>
-            <li className='mt-2'>
-                <img src="./ico-1.png" alt="" />
-            </li>
-        </ul>
+      <div className='relative'>
+     <img src="./blog-hero-main.png" className='w-[100%] lg:h-[500px]  brightness-50 opacity-90 ' alt="" />
+     <h1 className='  absolute top-[50%] left-[42%] text-2xl md:text-4xl lg:text-6xl text-white' >BLOGS</h1>
+     </div>
+     <div className='m-5 font-semibold tracking-wider'>
+    
+        <h1 className='text-lg lg:text-4xl about-heading2 uppercase xl:ml-20'>Trending</h1>
         </div>
+      <ul className='mt-4 flex flex-col items-center  p-10 gap-10 lg:hidden'>
+    <li className='w-[400px] h-[500px]   bg-white'>
+      <img src="./blog-test.png"  className='w-[100%]' alt="" />
+      <img src="./close.svg" alt=""  className='float-right w-5 mr-4 mt-7'/>
+      <h1 className='ml-4 mt-5 text-sm tracking-wider text-[#282828] font-semibold'>Arab Academy motors </h1>
+      <h1 className='ml-4  text-sm tracking-wider text-black font-semibold'>11 Oct. 2022</h1>
+      <h1 className='text-2xl ml-10 tracking-widest mt-5 text-[#282828] font-bold'>2023 LAUNCH</h1>
+      <p className='mt-5 mx-5 line-clamp-3 text-left'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque et eveniet, nemo provident unde est minima non eaque labore accusantium quasi nobis sequi quas consectetur tempora ipsam officiis voluptatibus itaque.</p>
+    </li>
+    <li className='w-[400px] h-[500px]  bg-white'>
+      <img src="./blog-test.png"  className='w-[100%]' alt="" />
+      <img src="./close.svg" alt=""  className='float-right w-5 mr-4 mt-7'/>
+      <h1 className='ml-4 mt-5 text-sm tracking-wider text-[#282828] font-semibold'>Arab Academy motors </h1>
+      <h1 className='ml-4  text-sm tracking-wider text-black font-semibold'>11 Oct. 2022</h1>
+      <h1 className='text-2xl ml-10 tracking-widest mt-5 text-[#282828] font-bold'>2023 LAUNCH</h1>
+      <p className='mt-5 mx-5 line-clamp-3 text-left'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque et eveniet, nemo provident unde est minima non eaque labore accusantium quasi nobis sequi quas consectetur tempora ipsam officiis voluptatibus itaque.</p>
+    </li>
+    <li className='w-[400px] h-[500px]  bg-white'>
+      <img src="./blog-test.png"  className='w-[100%]' alt="" />
+      <img src="./close.svg" alt=""  className='float-right w-5 mr-4 mt-7'/>
+      <h1 className='ml-4 mt-5 text-sm tracking-wider text-[#282828] font-semibold'>Arab Academy motors </h1>
+      <h1 className='ml-4  text-sm tracking-wider text-black font-semibold'>11 Oct. 2022</h1>
+      <h1 className='text-2xl ml-10 tracking-widest mt-5 text-[#282828] font-bold'>2023 LAUNCH</h1>
+      <p className='mt-5 mx-5 line-clamp-3 text-left'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque et eveniet, nemo provident unde est minima non eaque labore accusantium quasi nobis sequi quas consectetur tempora ipsam officiis voluptatibus itaque.</p>
+    </li>
+      </ul>
+      <ul className='mt-4 hidden mx-auto p-10  lg:flex items-center flex-col gap-10'>
+    <li className= 'relative bg-white flex xl:w-[1200px]'>
+      <img src="./blog-test.png" className='h-[100%] w-[540px]' alt="" /> 
+      <blockquote>
+      <h1 className='ml-4 mt-5 text-sm tracking-wider  text-[#282828] font-semibold'>Arab Academy motors </h1>
+      <h1 className='ml-4  text-sm tracking-wider mt-2 text-black font-semibold'>11 Oct. 2022</h1>
+      <h1 className='text-4xl ml-10 tracking-widest mt-8 text-[#282828] font-bold'>2023 LAUNCH</h1>
+      <p className='mt-5 mx-5 line-clamp-3 text-left'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque et eveniet, nemo provident unde est minima non eaque labore accusantium quasi nobis sequi quas consectetur tempora ipsam officiis voluptatibus itaque.</p>
+      </blockquote>
+      <img src="./close.svg" alt=""  className='absolute right-2 w-5 mr-4 mt-7'/>
+    </li>
+    <li className= 'relative bg-white flex xl:w-[1200px]'>
+      <img src="./blog-test.png" className='h-[100%] w-[540px]' alt="" /> 
+      <blockquote>
+      <h1 className='ml-4 mt-5 text-sm tracking-wider  text-[#282828] font-semibold'>Arab Academy motors </h1>
+      <h1 className='ml-4  text-sm tracking-wider mt-2 text-black font-semibold'>11 Oct. 2022</h1>
+      <h1 className='text-4xl ml-10 tracking-widest mt-8 text-[#282828] font-bold'>2023 LAUNCH</h1>
+      <p className='mt-5 mx-5 line-clamp-3 text-left'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque et eveniet, nemo provident unde est minima non eaque labore accusantium quasi nobis sequi quas consectetur tempora ipsam officiis voluptatibus itaque.</p>
+      </blockquote>
+      <img src="./close.svg" alt=""  className='absolute right-2 w-5 mr-4 mt-7'/>
+    </li>
+    <li className= 'relative bg-white flex xl:w-[1200px]'>
+      <img src="./blog-test.png" className='h-[100%] w-[540px]' alt="" /> 
+      <blockquote>
+      <h1 className='ml-4 mt-5 text-sm tracking-wider  text-[#282828] font-semibold'>Arab Academy motors </h1>
+      <h1 className='ml-4  text-sm tracking-wider mt-2 text-black font-semibold'>11 Oct. 2022</h1>
+      <h1 className='text-4xl ml-10 tracking-widest mt-8 text-[#282828] font-bold'>2023 LAUNCH</h1>
+      <p className='mt-5 mx-5 line-clamp-3 text-left'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque et eveniet, nemo provident unde est minima non eaque labore accusantium quasi nobis sequi quas consectetur tempora ipsam officiis voluptatibus itaque.</p>
+      </blockquote>
+      <img src="./close.svg" alt=""  className='absolute right-2 w-5 mr-4 mt-7'/>
+    </li>
+      </ul>
     </section>
   )
 }

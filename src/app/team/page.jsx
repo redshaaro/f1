@@ -3,7 +3,7 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-         <h1 className='text-center mt-20 text-5xl'>TEAM 2023</h1>
+         <h1 className='text-center mt-20  team-heading'>TEAM 2023</h1>
         <ul className='flex justify-center mt-10 gap-40 px-20 flex-wrap'>
           <li className='w-[269px] h-[422px] bg-gray-100'>
             <img className='rounded-full p-7' src="icon-1.png" alt="" />
